@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spaghetti Code</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> /
+        <link rel="stylesheet" href="Spaghetti.css">
+        <style>
+            body {
+                background-image: url("Spaghetti Code1.jpeg");  /* Hintergrundbild mit URL */
+                background-size: cover;         /* Streckt das Bild, um den gesamten Bereich abzudecken */
+                background-repeat: no-repeat;   /* Verhindert Wiederholungen des Bildes */
+                background-position: center;    /* Zentriert das Bild */
+                background-attachment: fixed;   /* Lässt das Bild beim Scrollen fixiert */
+            }
+            header {
+                display: flex;                  /* Ausrichtung von Elementen innerhalb eines Containers einfach und flexibel zu gestalten.*/
+                align-items: center;            /* Verschiebt den Inhalt nach rechts */
+                justify-content: space-between; /* Verschiebt den Inhalt nach rechts */
+                background-color: #EFAE4F;    /* Hintergrundfarbe des Headers */
+                text-align: center;             /* Zentriert den Inhalt vertikal im Header */
+                padding: 6px;                   /* Optional, um etwas Innenabstand zu schaffen */
+            }
+            header img {
+                width: 160px;                   /* Optional, um die Bildbreite anzupassen */
+                height: 120px;                  /* Optional, um die Bildhoehe anzupassen */
+                padding: 0;                     /* optional, um etwas innenabstand zu schaffen */
+                margin: 0;                      /* Optional, um etwas außenabstand zu schaffen */
+            }
+            h1 {
+                font-size: 50px;                /* Optional, um die Schriftgroesse anzupassen */
+                text-align: center;             /* Zentriert den Text */ 
+                color: white;  
+                text-shadow: 4px 4px 10px black;    /* Optional, um die Schattenfarbe anzupassen und um die Schriftgroesse anzupassen */
+                text-shadow: 
+                -1px -1px 0 #000,   /* Oben links */
+                 1px -1px 0 #000,   /* Oben rechts */
+                -1px  1px 0 #000,   /* Unten links */
+                 1px  1px 0 #000;   /* Unten rechts */
+            }
+            li {
+                width: 150px;
+            }
+            nav ul {
+                list-style-type: none;          /* Versteckt die Punkte der Navigationsleiste */
+                margin: 0;                      /* abstand zwischen den Elementen außerhalb in den Navigationsleiste */
+                padding: 0;                     /* abstand zwischen den Elementen innen in den Navigationsleiste */       
+                overflow: hidden;               /* Verhindert, dass die Navigationsleiste nach unten verschoben wird */
+                background-color: #EFAE4F;    /* Hintergrundfarbe der Navigationsleiste */
+                font-size: 30px;                /* Optional, um die Schriftgroesse anzupassen */
+                text-align: center;             /* Zentriert den Text */ 
+            }
+            nav ul li {
+                float: left;                    /* Verwendung von Flexbox */
+            }
+            nav ul li a {
+                display: block;                 /* Verwendung von Flexbox */
+                color: white;                 /* Textfarbe der Schaltflächen */
+                text-align: center;             /* Zentriert den Text */
+                padding: 14px 16px;             /* Abstand zwischen den Schaltflächen */
+                text-decoration: none;          /* Versteckt den Link */
+                box-shadow: 2px 4px 8px black;/* Schatten um den Text */
+                text-shadow: 4px 4px 10px black; /* Schatten um den Text */
+                border-radius: 20px;            /* Runde Ecken */
+                border: #828181 2px 2px solid;/* Rahmen um den Text */
+                text-shadow: 
+                -1px -1px 0 #000,   /* Oben links */
+                 1px -1px 0 #000,   /* Oben rechts */
+                -1px  1px 0 #000,   /* Unten links */
+                 1px  1px 0 #000;   /* Unten rechts */
+            }
+            nav ul li a:hover                   /* Hover-Effekt für die Schaltflächen */ {
+                background-color:  #080808;   /* Hover-Effekt für den Hintergrund */
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* Stärkere Schatten beim Hover */
+            }
+            #Anmelden {
+                background-color: red;        /* Hintergrundfarbe der Schaltfläche */
+                border-radius: 20px;            /* Runde Ecken */
+            }
+            #Anmelden a:hover                   /* Hover-Effekt für die Schaltflächen */ {
+                background-color:  #0db501;   /* Hover-Effekt für den Hintergrund */
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* Stärkere Schatten beim Hover */
+            }
+            #Startseite {
+                text-align: center;             /* Zentriert den Text */
+                padding: 20px;                  /* Abstand zwischen den Elementen */
+                font-size: 20px;                /* Optional, um die Schriftgroesse anzupassen */
+                color: white;                 /* Optional, um die Schriftfarbe anzupassen */
+            }
+            #Startseite h1 {
+                font-size: 200px;               /* Optional, um die Schriftgroesse anzupassen */
+                text-align: center;             /* Zentriert den Text */
+                text-shadow: #111 5px 5px;    /* Optional, um die Schattenfarbe anzupassen */
+            }
+                                                /* Optional, um die Schriftgroesse anzupassen */
+            #Startseite p { 
+                font-size: 30px;                /* Optional, um die Schriftgroesse anzupassen */
+                text-align: center;             /* Zentriert den Text */
+                color: white;                 /* Optional, um die Schriftfarbe anzupassen */
+                text-shadow: #111 5px 5px;    /* Optional, um die Schattenfarbe anzupassen */
+            }
+            img {
+                width: 100px;                   /* Optional, um die Bildgroesse anzupassen */
+                height: 100px;                  /* Optional, um die Bildgroesse anzupassen */
+            }
+                                                /* Container für das gesamte Element */
+            #Bestellen {
+                display: flex;                  /* Flexbox aktivieren */
+                flex-direction: column;         /* Elemente vertikal anordnen */
+                align-items: center;            /* Inhalte horizontal zentrieren */
+                justify-content: center;        /* Inhalte vertikal zentrieren */
+                height: 5vh;                    /* Nimmt die volle Höhe des Bildschirms ein */
+            }
+
+                                                /* Icons-Container */
+            #img_icons {
+                display: flex;                  /* Flexbox für horizontalen Aufbau */
+                gap: 90px;                      /* Abstand zwischen den Icons */
+                margin-bottom: 20px;            /* Abstand zwischen Icons und Buttons */
+            }
+            button:visited {
+                color: pink;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            button:hover                         /* Hover-Effekt für die Schaltflächen */ {
+                background-color: green;      /* Hover-Effekt für den Hintergrund */
+                text-shadow: 6px 6px 10px rgba(0.4, 0.4, 0.4, 0.4); /* Stärkere Schatten beim Hover */
+                color: white;
+            }
+            #button_icons{
+                color: white;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            button {
+                gap: 90px;                      /* Abstand zwischen den Icons */
+                margin-bottom: 20px;            /* Abstand zwischen Icons und Buttons */
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                background-color: #EFAE4F;    /* Hintergrundfarbe des Buttons */
+                padding: 5px auto;              /* Abstand im Button */
+                border: none;                   /* Versteckt den Rahmen */
+                border-radius: 20px;            /* Runde Ecken */
+                cursor: pointer;                /* Zeigt eine Hand beim Überfahren */
+                font-size: 30px;                /* Schriftgröße */
+                width: 150px;                   /* Breite des Buttons */
+                height: 50px;                   /* Höhe des Buttons */
+                text-align: center;             /* Zentriert den Text im Button */
+                margin: 0 15px;                 /* Abstand zwischen den Buttons */
+                text-shadow: 
+                -1px -1px 0 #000,   /* Oben links */
+                 1px -1px 0 #000,   /* Oben rechts */
+                -1px  1px 0 #000,   /* Unten links */
+                 1px  1px 0 #000;   /* Unten rechts */
+            }
+            label {
+                font-size: 30px;                /* Optional, um die Schriftgroesse anzupassen */
+                color: white;                 /* Optional, um die Schriftfarbe anzupassen */
+                text-shadow: 2px 2px 5px red; /* Optional, um die Schattenfarbe anzupassen */
+                text-align: center;             /* Zentriert den Text */
+                display: block;                 /* Verwendung von Flexbox */
+                justify-content: center;        /* Verschiebt den Inhalt nach rechts */
+                margin-top: 70px;
+            }
+            footer {
+                background-color: #EFAE4F;    /* Hintergrundfarbe des Footers */
+                opacity: 0.9;                   /* Macht das gesamte Element zu 50 % durchsichtig */
+                display: flex;                  /* Verwendung von Flexbox */
+                justify-content: center;        /* Verschiebt den Inhalt nach rechts */
+                text-align: center;             /* Zentriert den Inhalt vertikal im Footer */
+                padding: 5px;                   /* Optional, um etwas Innenabstand zu schaffen */
+                font-size: 20px;                /* Optional, um die Schriftgroesse anzupassen */
+                color: white;                 /* Optional, um die Schriftfarbe anzupassen */
+                position: fixed;                /* Fixiert den Footer am unteren Bildschirmrand */
+                bottom: 0;                      /* Positioniert den Footer am unteren Bildschirmrand */
+                width: 100%;                    /* Setzt die Breite des Footers auf die gesamte Breite des Containers */
+                margin: 10px;                   /* Verwendung von Flexbox */
+                text-shadow: 
+                -1px -1px 0 #000,   /* Oben links */
+                 1px -1px 0 #000,   /* Oben rechts */
+                -1px  1px 0 #000,   /* Unten links */
+                 1px  1px 0 #000;   /* Unten rechts */
+            }
+            footer img {
+                width: 100px;                   /* Verwendung von Flexbox */
+                height: 70px;                   /* Verwendung von Flexbox */
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <img src="logo.jpg" alt="spaghetti logo">
+            <h1>Spaghetti & Pizza Code</h1>
+            <nav>
+                <ul>
+                    <li><a href="#Startseite">Startseite</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="#kontakt">kontakt</a></li>
+                    <li><a href="#Über uns">Über uns</a></li>
+                    <li id="Anmelden"><a href="#Anmelden">Anmelden</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="Startseite">
+                <h2>Willkommen im Spaghetti & Pizza Code!</h2>
+                <p>
+                Entdecken Sie die Welt der Aromen in unserem gemütlichen Restaurant. 
+                <br>Genießen Sie traditionelle Gerichte mit einer modernen Note, zubereitet aus frischen, regionalen Zutaten. 
+                <br>Wir freuen uns auf Ihren Besuch!</p>
+            </section>
+            <br><br><br>
+            <form action="" method="GET">
+                <div id="Bestellen">
+                    <div id="img_icons">
+                        <img src="Spaghetti Icon-Photoroom.png" alt="Spaghetti Icon">
+                        <img src="Pizza Icon-Photoroom.png" alt="Pizza Icon">
+                    </div>
+                    <div id="button_icons">
+                        <button><a href="file:///C:/Users/Student/OneDrive%20-%20GFN%20GmbH%20(EDU)/Desktop/Spaghetti%20Code/%23Spaghetti.html">Spaghetti</a></button>
+                        <button><a href="#Pizza" target="_blank">Pizza</a></button>
+                    </div>
+                </div>
+                <br>
+                <label for="Bestellen">Hier Bestellen</label>
+            </form>
+        </main> 
+        <footer>
+            <a href="https://www.SpaghettiCode.com"><img src="LOGO.jpg" alt="spaghetti logo"></a>
+            <p>© Spaghetti & Pizza Code. All rights reserved.</p>
+
+        </footer>
+    </body>
+</html>
