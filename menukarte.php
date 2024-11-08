@@ -19,35 +19,66 @@
         <a href="./login.php">Login</a>
         <a href="./impressum.php">Impressum</a>
     </nav>
-<main>
-    <h3>Menükarte</h3>
-    <div class="container">
-                <img src="Images\Classic Italian spaghetti meat balls.jpg" alt="">
-                <div class="overlay">
-                    <div class="text">Classic Italian<br>Spaghetti<br><br>13,60 €</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="Images\Homemade Spaghetti Sauce with fresh tomatoes.jpeg" alt="">
-                <div class="overlay">
-                        <div class="text">Homemade<br>SpaghettiSauce<br>with fresh<br><br>10,90 €</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="Images\Spaghetti Bolognese Recipe.jpg" alt="">
-                <div class="overlay">
-                    <div class="text">Spaghetti<br> Bolognese<br> Recipe<br><br><br></div>
-                    
-                    <div style="font-size: 15px; color:black" class="text">12,20 €</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="Images\The Best Spaghetti Salad.jpeg" alt="">
-                <div class="overlay">
-                    <div class="text">The Best<br>Spaghetti Salad<br><br>15,90 €</div>
-                </div>
-            </div>
-</main>
 
+    <section id="menu">
+        <h2>Menükarte</h2>
+        <main>
+            <!-- Gericht 1 -->
+            <div class="container">
+                <div class="image-container">
+                    <img src="./Images/Gerichte/gericht1_spaghetti_bolognese.png" alt="picture of spaghetti bolognese">
+                    <div class="overlay">
+                        <div class="text">
+                            <span>Spaghetti Bolognese</span>
+                            <div class="price">12,20 €</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="order-button">Bestellen</button>
+            </div>
+
+            <!-- Gericht 2 -->
+            <div class="container">
+                <div class="image-container">
+                    <img src="./Images/Gerichte/gericht2_spaghetti_carbonara.png" alt="picture of spaghetti carbonara">
+                    <div class="overlay">
+                        <div class="text">
+                            <span>Spaghetti Carbonara</span>
+                            <div class="price">12,20 €</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="order-button">Bestellen</button>
+            </div>
+
+            <!-- Gericht 3 -->
+            <div class="container">
+                <div class="image-container">
+                    <img src="./Images/Gerichte/gericht3_spaghetti_salat.png" alt="picture of spaghetti salad">
+                    <div class="overlay">
+                        <div class="text">
+                            <span>Spaghetti Salat</span>
+                            <div class="price">10,20 €</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="order-button">Bestellen</button>
+            </div>
+
+            <!-- Gericht 4 -->
+            <div class="container">
+                <div class="image-container">
+                    <img src="./Images/Gerichte/gericht4_spaghetti_eis.png" alt="picture of spaghetti ice cream">
+                    <div class="overlay">
+                        <div class="text">
+                            <span>Spaghetti Eis</span>
+                            <div class="price">7,80 €</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="order-button">Bestellen</button>
+            </div>
+        </main>
+    </section>
 </body>
 </html>

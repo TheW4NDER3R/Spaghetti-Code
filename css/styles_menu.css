@@ -1,80 +1,126 @@
-/* Stile für das Haupt-Container-Element */
+/* Haupt-Container für horizontale Anordnung */
 main {
-    display: flex;                /* Flexbox für horizontale Zentrierung */
-    justify-content: center;      /* Zentriert die Container horizontal */
-    flex-wrap: wrap;              /* Ermöglicht Zeilenumbruch bei vielen Bildern */
-    gap: 20px;                    /* Abstand zwischen den Containern */
-    padding: 20px;                /* Optionaler Innenabstand */
+    display: flex;
+    flex-wrap: wrap; /* Bilder umbrechen, falls der Platz nicht ausreicht */
+    justify-content: flex-start; /* Bilder von links nach rechts */
+    gap: 20px; /* Abstand zwischen den Containern */
+    padding: 20px;
+    align-items: center; /* Vertikale Ausrichtung */
 }
 
 /* Container für jedes Bild */
 .container {
     position: relative;
-    width: 150px;                /* Maximale Breite der einzelnen Container */
-    margin: 5px;                 /* Optionale Abstände */
+    width: 150px;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transition: transform 0.3s ease;
 }
 
 /* Bild innerhalb des Containers */
 .container img {
-    display: block;              /* Entfernt zusätzliche Ränder */
-    width: 200px;                 /* Bild passt sich der Container-Breite an */
-    height: 150px;                /* Höhe wird automatisch berechnet */
+    display: block;
+    width: 100%; /* Passt sich der Container-Breite an */
+    height: auto; /* Erhält das Seitenverhältnis */
     border-radius: 5px;
 }
 
-/* Overlay-Effekt */
+/* Hover-Effekt für den gesamten Container */
+.container:hover {
+    transform: scale(1.1); /* Größerer Effekt */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stärkere Schatten */
+}
+
+/* Overlay über dem Bild */
 .overlay {
     position: absolute;
-    bottom: 100%;
+    top: 0;
     left: 0;
-    right: 0;
-    background-color: #eca22a;
-    width: 50%;                 /* Passt sich dem Bild an */
-    height: 0;
-    transition: .5s ease;
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* Hover-Effekt für Overlay */
-.container:hover .overlay {
-    bottom: 0;
+    width: 100%;
     height: 100%;
+    background-color:  rgba(229, 172, 81, 0.95); /* Overlay */
+    opacity: 0; /* Unsichtbar im Ausgangszustand */
+    display: flex;
+    justify-content: center; /* Zentriert den Text horizontal */
+    align-items: center; /* Zentriert den Text vertikal */
+    transition: opacity 0.7s ease; /* Langsame Überblendung */
 }
 
 /* Text im Overlay */
-#preis {
-
-    font-size: 100px;
-
-}
 .text {
-    white-space: nowrap;
     color: white;
-    font-size: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%); 
-    text-align: top;
+    font-size: 18px; /* Größerer Text */
+    line-height: 1.5; /* Abstand zwischen Zeilen */
+    text-align: center; /* Text zentrieren */
+    opacity: 0; /* Unsichtbar im Ausgangszustand */
+    transition: opacity 0.7s ease; /* Gleiche Dauer wie das Overlay */
+    text-shadow: 2px 2px 4px rgba(73, 73, 73, 0.5);
 }
 
-            @media only screen and (max-width: 700px) {
-                .container {
-                width: 49.99999%;
-                margin: 6px 0;
-                }
-            }
-            @media only screen and (max-width: 500px) {
-                .container {
-                width: 100%;
-                }
-            }
-            .clearfix:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
+/* Hover-Effekt: Overlay und Text einblenden */
+.container:hover .overlay {
+    opacity: 1; /* Overlay wird sichtbar */
+}
+
+.container:hover .text {
+    opacity: 1; /* Text wird sichtbar */
+}
+
+.price {
+
+    color: rgb(58, 58, 58);
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(73, 73, 73, 0.5);
+}
+.image-container {
+    position: relative; /* Ermöglicht das Overlay innerhalb des Containers */
+    width: 100%; /* Gleiche Breite wie das Bild */
+    height: auto; /* Passt sich dem Bild an */
+}
+
+.image-container img {
+    display: block; /* Verhindert unerwünschten zusätzlichen Platz */
+    width: 100%; /* Bild füllt den Container */
+    height: auto; /* Bewahrt das Seitenverhältnis */
+    border-radius: 5px; /* Gleiche abgerundete Ecken wie vorher */
+}
+
+.overlay {
+    position: absolute; /* Overlay schwebt über dem Bild */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Deckt nur das Bild ab */
+    background-color: rgba(229, 172, 81, 0.95); /* Overlay-Farbe */
+    opacity: 0; /* Unsichtbar im Ausgangszustand */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.7s ease;
+    border-radius: 5px; /* Gleiche abgerundete Ecken */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Sichtbar beim Hover über das Bild */
+}
+
+.order-button {
+    display: block; /* Unter dem Bild positioniert */
+    margin: 10px auto 0; /* Zentriert den Button */
+    padding: 10px 20px;
+    background-color: #f2b654;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #e1a846;
+    transform: scale(1.05);
+}
