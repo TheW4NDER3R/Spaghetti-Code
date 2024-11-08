@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spaghetti-Code</title>
     <!-- Verknüpfung zur externen CSS-Datei -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!-- Navigationsleiste -->
     <nav>
-        <a href="./index.html">
+        <a href="./index.php">
             <img src="./Images/logo.png" alt="Logo"> <!-- Logo mit Link -->
         </a>
-        <a href="./menukarte.html">Menükarte</a>
-        <a href="./kontakt.html">Kontakt</a>
-        <a href="./login.html">Login</a>
-        <a href="./impressum.html">Impressum</a>
+        <a href="./menukarte.php">Menükarte</a>
+        <a href="./kontakt.php">Kontakt</a>
+        <a href="./login.php">Login</a>
+        <a href="./impressum.php">Impressum</a>
     </nav>
 <main>
     <section id="impressum">
