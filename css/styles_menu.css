@@ -1,0 +1,80 @@
+/* Stile für das Haupt-Container-Element */
+main {
+    display: flex;                /* Flexbox für horizontale Zentrierung */
+    justify-content: center;      /* Zentriert die Container horizontal */
+    flex-wrap: wrap;              /* Ermöglicht Zeilenumbruch bei vielen Bildern */
+    gap: 20px;                    /* Abstand zwischen den Containern */
+    padding: 20px;                /* Optionaler Innenabstand */
+}
+
+/* Container für jedes Bild */
+.container {
+    position: relative;
+    width: 150px;                /* Maximale Breite der einzelnen Container */
+    margin: 5px;                 /* Optionale Abstände */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Bild innerhalb des Containers */
+.container img {
+    display: block;              /* Entfernt zusätzliche Ränder */
+    width: 200px;                 /* Bild passt sich der Container-Breite an */
+    height: 150px;                /* Höhe wird automatisch berechnet */
+    border-radius: 5px;
+}
+
+/* Overlay-Effekt */
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #eca22a;
+    width: 50%;                 /* Passt sich dem Bild an */
+    height: 0;
+    transition: .5s ease;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Hover-Effekt für Overlay */
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+/* Text im Overlay */
+#preis {
+
+    font-size: 100px;
+
+}
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%); 
+    text-align: top;
+}
+
+            @media only screen and (max-width: 700px) {
+                .container {
+                width: 49.99999%;
+                margin: 6px 0;
+                }
+            }
+            @media only screen and (max-width: 500px) {
+                .container {
+                width: 100%;
+                }
+            }
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
