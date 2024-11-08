@@ -10,12 +10,12 @@
 <body>
     <!-- Navigationsleiste -->
     <nav>
-        <a href="../index.html">
-            <img src="../Images/logo Unbenannt-1.png" alt="Logo"> <!-- Logo mit Link -->
+        <a href="./index.html">
+            <img src="./Images/logo.png" alt="Logo"> <!-- Logo mit Link -->
         </a>
         <a href="./menukarte.html">Menükarte</a>
         <a href="./kontakt.html">Kontakt</a>
-        <a href="#login">Login</a>
+        <a href="./login.html">Login</a>
         <a href="./impressum.html">Impressum</a>
     </nav>
 
