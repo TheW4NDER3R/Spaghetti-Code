@@ -11,7 +11,7 @@
     <!-- Navigationsleiste -->
     <nav>
         <a href="./index.php">
-            <img src="./Images/logo.png" alt="Logo"> <!-- Logo mit Link -->
+            <img src="./web_images/logo.png" alt="Logo"> <!-- Logo mit Link -->
         </a>
         <a href="./menukarte.php">Menükarte</a>
         <a href="./kontakt.php">Kontakt</a>

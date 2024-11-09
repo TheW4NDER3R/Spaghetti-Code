@@ -12,7 +12,7 @@
     <!-- Navigationsleiste -->
     <nav>
         <a href="./index.php">
-            <img src="./Images/logo.png" alt="Logo"> <!-- Logo mit Link -->
+            <img src="./web_images/logo.png" alt="Logo"> <!-- Logo mit Link -->
         </a>
         <a href="./menukarte.php">Menükarte</a>
         <a href="./kontakt.php">Kontakt</a>
@@ -26,7 +26,7 @@
             <!-- Gericht 1 -->
             <div class="container">
                 <div class="image-container">
-                    <img src="./Images/Gerichte/gericht1_spaghetti_bolognese.png" alt="picture of spaghetti bolognese">
+                    <img src="./web_images/gerichte/gericht1_spaghetti_bolognese.png" alt="picture of spaghetti bolognese">
                     <div class="overlay">
                         <div class="text">
                             <span>Spaghetti Bolognese</span>
@@ -40,7 +40,7 @@
             <!-- Gericht 2 -->
             <div class="container">
                 <div class="image-container">
-                    <img src="./Images/Gerichte/gericht2_spaghetti_carbonara.png" alt="picture of spaghetti carbonara">
+                    <img src="./web_images/gerichte/gericht2_spaghetti_carbonara.png" alt="picture of spaghetti carbonara">
                     <div class="overlay">
                         <div class="text">
                             <span>Spaghetti Carbonara</span>
@@ -54,7 +54,7 @@
             <!-- Gericht 3 -->
             <div class="container">
                 <div class="image-container">
-                    <img src="./Images/Gerichte/gericht3_spaghetti_salat.png" alt="picture of spaghetti salad">
+                    <img src="./web_images/gerichte/gericht3_spaghetti_salat.png" alt="picture of spaghetti salad">
                     <div class="overlay">
                         <div class="text">
                             <span>Spaghetti Salat</span>
@@ -68,7 +68,7 @@
             <!-- Gericht 4 -->
             <div class="container">
                 <div class="image-container">
-                    <img src="./Images/Gerichte/gericht4_spaghetti_eis.png" alt="picture of spaghetti ice cream">
+                    <img src="./web_images/gerichte/gericht4_spaghetti_eis.png" alt="picture of spaghetti ice cream">
                     <div class="overlay">
                         <div class="text">
                             <span>Spaghetti Eis</span>
