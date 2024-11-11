@@ -7,6 +7,25 @@
     <!-- Verknüpfung zur externen CSS-Datei -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/styles_menu.css">
+
+    <script>
+        let currentDish = "";
+
+        function handleOrder(dishName) {
+            currentDish = dishName;
+            document.getElementById("orderModal").style.display = "flex";
+        }
+
+        function confirmOrder() {
+            const quantity = document.getElementById("quantitySelect").value;
+            alert(`Vielen Dank! Sie haben ${quantity} Portion(en) von "${currentDish}" bestellt.`);
+            document.getElementById("orderModal").style.display = "none";
+        }
+
+        function closeModal() {
+            document.getElementById("orderModal").style.display = "none";
+        }
+    </script>
 </head>
 <body>
 
@@ -47,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="order-button">Bestellen</button>
+                <button class="order-button" onclick="handleOrder('Spaghetti Bolognese')">Bestellen</button>
             </div>
 
             <!-- Gericht 2 -->
@@ -61,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="order-button">Bestellen</button>
+                <button class="order-button" onclick="handleOrder('Spaghetti Carbonara')">Bestellen</button>
             </div>
 
             <!-- Gericht 3 -->
@@ -75,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="order-button">Bestellen</button>
+                <button class="order-button" onclick="handleOrder('Spaghetti Salat')">Bestellen</button>
             </div>
 
             <!-- Gericht 4 -->
@@ -89,9 +108,30 @@
                         </div>
                     </div>
                 </div>
-                <button class="order-button">Bestellen</button>
+                <button class="order-button" onclick="handleOrder('Spaghetti Eis')">Bestellen</button>
             </div>
         </main>
     </section>
+
+    <!-- Modal für Menge -->
+    <div id="orderModal">
+        <div id="modalContent">
+            <h3>Wie viele Portionen möchten Sie bestellen?</h3>
+            <select id="quantitySelect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button onclick="confirmOrder()">Bestätigen</button>
+            <button onclick="closeModal()">Abbrechen</button>
+        </div>
+    </div>
 </body>
 </html>
