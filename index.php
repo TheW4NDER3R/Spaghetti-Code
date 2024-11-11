@@ -20,7 +20,7 @@
     <!-- Navigationsleiste -->
         <nav>
 
-            <a href="./menukarte.php">Stratseite</a>
+            <a href="./index.php">Stratseite</a>
             <a href="./menukarte.php">Menükarte</a>
             <a href="./kontakt.php">Kontakt</a>
             <a href="./impressum.php">Impressum</a>

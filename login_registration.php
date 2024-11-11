@@ -9,15 +9,28 @@
 </head>
 <body>
     <!-- Navigationsleiste -->
-    <nav>
-        <a href="./index.php">
-            <img src="./web_images/logo.png" alt="Logo"> <!-- Logo mit Link -->
+    <header class="header">
+    <!-- Logo -->
+        <a id="logo" href="./index.php">
+        <img src="./web_images/logo.png" alt="Logo"> <!-- Logo mit Link -->
         </a>
-        <a href="./menukarte.php">Menükarte</a>
-        <a href="./kontakt.php">Kontakt</a>
-        <a href="./login.php">Login</a>
-        <a href="./impressum.php">Impressum</a>
-    </nav>
+
+    <!-- Resturant Name -->
+        <h1 id="header">Spaghetti-Code</h1>
+    
+    <!-- Navigationsleiste -->
+        <nav>
+
+            <a href="./index.php">Stratseite</a>
+            <a href="./menukarte.php">Menükarte</a>
+            <a href="./kontakt.php">Kontakt</a>
+            <a href="./impressum.php">Impressum</a>
+            <a id="servieren" href="./index.php">
+            <img  src="./web_images/essen_servieren.png" alt="Logo"> <!-- Logo mit Link -->
+            </a>
+            <a id="login" href="./login.php">Login</a>
+        </nav>
+    </header>
 
     <!-- Registrierungsbereich -->
     <section id="register">
