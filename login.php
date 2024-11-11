@@ -31,24 +31,9 @@
             
             <button type="submit">Anmelden</button>
         </form>
-        <p>Kein Konto? <a href="#register">Hier registrieren</a></p>
+        <p>Kein Konto? <a href="./login_registration.php">Hier registrieren</a></p>
     </section>
 
-    <!-- Registrierungsbereich -->
-    <section id="register">
-        <h2>Registrieren</h2>
-        <form action="/register" method="POST">
-            <label for="reg-email">E-Mail-Adresse:</label>
-            <input type="email" id="reg-email" name="email" placeholder="Deine E-Mail-Adresse" required>
-            
-            <label for="reg-password">Passwort:</label>
-            <input type="password" id="reg-password" name="password" placeholder="Erstelle ein Passwort" required>
-            
-            <label for="confirm-password">Passwort bestätigen:</label>
-            <input type="password" id="confirm-password" name="confirm_password" placeholder="Passwort bestätigen" required>
-            
-            <button type="submit">Registrieren</button>
-        </form>
-    </section>
+
 </body>
 </html>
