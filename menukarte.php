@@ -9,16 +9,25 @@
     <link rel="stylesheet" href="./css/styles_menu.css">
 </head>
 <body>
-    <!-- Navigationsleiste -->
-    <nav>
-        <a href="./index.php">
+
+    <header class="header">
+        <!-- Logo -->
+            <a id="logo" href="./index.php">
             <img src="./web_images/logo.png" alt="Logo"> <!-- Logo mit Link -->
-        </a>
-        <a href="./menukarte.php">Menükarte</a>
-        <a href="./kontakt.php">Kontakt</a>
-        <a href="./login.php">Login</a>
-        <a href="./impressum.php">Impressum</a>
-    </nav>
+            </a>
+
+        <!-- Resturant Name -->
+            <h1 id="header">Spaghetti-Code</h1>
+        
+        <!-- Navigationsleiste -->
+            <nav>
+                <a href="./menukarte.php">Stratseite</a>
+                <a href="./menukarte.php">Menükarte</a>
+                <a href="./kontakt.php">Kontakt</a>
+                <a href="./login.php">Login</a>
+                <a href="./impressum.php">Impressum</a>
+            </nav>
+    </header>
 
     <section id="menu">
         <h2>Menükarte</h2>

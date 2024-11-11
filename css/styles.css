@@ -11,47 +11,105 @@ body {
     color: white; /* Standardfarbe für Text */
 }
 
-/* Fixe Navigationsleisten Style */
-nav {
-    background-color: rgba(242, 182, 84, 0.95); /* Transparente Hintergrundfarbe */
-    padding: 10px 20px; /* Zusätzlicher Innenabstand */
-    text-align: left;
+/* Header-Grundlayout */
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2b654;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Oberer Bereich mit Logo und Firmennamen */
+.header .top-row {
     display: flex;
     align-items: center;
-    position: fixed; /* Fixiert die Navigationsleiste */
-    top: 0;
-    width: 100%; /* Dehnt die Leiste über die gesamte Breite */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten für besseren Kontrast */
-    z-index: 1000; /* Überlappt andere Elemente */
+    justify-content: center; /* Zentriert den Firmennamen in der Mitte */
+    width: 100%;
+    position: relative; /* Ermöglicht das absolute Positionieren des Logos */
 }
 
-/* Navigations-Logo */
-nav img {
-    height: 100px; /* Höhe des Logos vergrößert */
-    width: auto; /* Automatische Breite, um das Seitenverhältnis zu wahren */
-    margin-right: 15px;
+/* Logo linksbündig */
+#logo {
+    position: absolute;
+    left: 20px; /* Abstand vom linken Rand */
+    padding-bottom: 200px;
 }
 
-/* Navigations-Links */
-nav a {
+#logo img {
+    width: 140px;
+    height:140px;
+
+}
+#servieren img{
+    width: 30px;
+    height: 30px;
+    vertical-align: bottom;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+#servieren {
+    right: 15000px;
+    padding: 0 5px;
+}
+#login {
+    margin-right: 10px ;
+}
+
+/* Firmenname zentriert */
+.header h1 {
+    color: rgb(255, 255, 255);
+    font-size: 58px;
+    margin: 0;
+    text-shadow: 
+    -1px -1px 0 rgb(98, 98, 98), /* Oben links */
+    1px -1px 0 rgb(98, 98, 98),  /* Oben rechts */
+    -1px 1px 0 rgb(98, 98, 98),  /* Unten links */
+    1px 1px 0 rgb(98, 98, 98);   /* Unten rechts */
+}
+
+/* Navigationsbereich am unteren Rand des Headers und rechtsbündig */
+.header nav {
+    align-self: center;
+    padding-right: 20px; /* Konsistenter Abstand vom rechten Rand */
+    margin-top: auto; /* Positioniert die Navigation am unteren Rand des Headers */
+    display: inline-block;
+}
+
+/* Links in der Navigationsleiste */
+/* Links in der Navigationsleiste */
+.header nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
-    font-size: 20px; /* Schriftgröße der Links erhöht */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Starker Textschatten */
+    font-size: 33px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.9);
+    margin-right: 15px; /* Abstand zwischen den Links */
+
+}
+ 
+/* Entfernt den Abstand nach dem letzten Link */
+.header nav a:last-child {
+    margin-right: 0;
 }
 
-/* Hover-Effekt für Links */
-nav a:hover {
+/* Hover-Effekt für Navigationslinks */
+.header nav a:hover {
+    color: #ffcc00;
     text-decoration: underline;
-    color: #ffcc00; /* Farbwechsel beim Hover */
 }
 
-/* Freiraum für fixierte Navigation */
-body > *:not(nav) {
-    margin-top: 120px; /* Platz für die größere fixierte Navigation mit dem vergrößerten Logo */
+/* Platz für den fixierten Header */
+body > *:not(.header) {
+    margin-top: 130px; /* Platz für den fixierten Header */
 }
+
 
 /* Abschnitte */
 section {
