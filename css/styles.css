@@ -181,6 +181,76 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Deutlicher Textschatten */
 }
 
+.order-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.order-section label {
+    color: white;
+    font-weight: bold;
+}
+
+.order-section select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+}
+    /* Stil für das modale Fenster */
+    #orderModal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    #modalContent {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 300px;
+        width: 90%;
+    }
+
+    #modalContent h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    #modalContent select {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    #modalContent button {
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+        background-color: #f2b654;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #modalContent button:hover {
+        background-color: #e1a846;
+    }
 
 
 
