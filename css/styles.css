@@ -132,7 +132,7 @@ form {
 label {
     margin-bottom: 5px;
     font-weight: bold;
-    color: #f2b654; /* Helle Farbe für Labels */
+    color: #f2b654;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 input {
@@ -144,15 +144,26 @@ input {
     background-color: #fff;
     color: #333;
 }
+.form-group-row {
+    display: flex;
+    gap: 20px; /* Abstand zwischen den Eingabegruppen */
+    margin-bottom: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Beide Eingabefelder nehmen gleich viel Platz ein */
+}
 button {
     padding: 10px;
     background-color: #f2b654;
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 30px;
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.9);
 }
 button:hover {
     background-color: #e1a846;
