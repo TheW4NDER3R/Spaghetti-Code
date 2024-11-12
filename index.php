@@ -1,3 +1,30 @@
+<?php
+session_start();
+
+// Initialisiere Bestellungen, wenn noch nicht vorhanden
+if (!isset($_SESSION['bestellungen'])) {
+    $_SESSION['bestellungen'] = [];
+}
+
+// Bestellung hinzufügen, falls das Formular gesendet wurde
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['gericht'], $_POST['menge'], $_POST['preis'])) {
+    $gericht = $_POST['gericht'];
+    $menge = (int)$_POST['menge'];
+    $preis = (float)$_POST['preis'];
+
+    // Bestellung speichern
+    $_SESSION['bestellungen'][] = [
+        'gericht' => $gericht,
+        'menge' => $menge,
+        'preis' => $preis,
+        'gesamtpreis' => $menge * $preis,
+    ];
+}
+
+// Berechnung der Bestellanzahl für den Zähler
+$bestellAnzahl = count($_SESSION['bestellungen']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +52,9 @@
             <a href="./kontakt.php">Kontakt</a>
             <a href="./impressum.php">Impressum</a>
             <a id="login" href="./login.php">Login</a>
-            <a id="servieren" href="./index.php">
-            <img  src="./web_images/essen_servieren.png" alt="Logo"> <!-- Logo mit Link -->
+            <a id="servieren" href="./bestellungen.php">
+                <img src="./web_images/essen_servieren.png" alt="Warenkorb">
+                <?php echo count($_SESSION ["bestellungen"])?>
             </a>
         </nav>
     </header>

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +27,9 @@
         <a href="./kontakt.php">Kontakt</a>
         <a href="./impressum.php">Impressum</a>
         <a id="login" href="./login.php">Login</a>
-        <a id="servieren" href="./index.php">
-        <img  src="./web_images/essen_servieren.png" alt="Logo"> <!-- Logo mit Link -->
+        <a id="servieren" href="./bestellungen.php">
+                <img src="./web_images/essen_servieren.png" alt="Warenkorb">
+                <?php echo count($_SESSION ["bestellungen"])?>
         </a>
     </nav>
     </header>

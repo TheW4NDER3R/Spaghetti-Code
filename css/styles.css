@@ -13,8 +13,8 @@ body {
 
 /* Header-Grundlayout */
 .header {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Elemente nebeneinander */
+    flex-direction: column; /* Elemente nebeneinander */
     background-color: #f2b654;
     position: fixed;
     top: 0;
@@ -22,13 +22,13 @@ body {
     height: 120px;
     padding: 10px 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    z-index: 1000; /* Stellt sicher, dass der Header im Vordergrund bleibt */
 }
 
 /* Oberer Bereich mit Logo und Firmennamen */
 .header .top-row {
-    display: flex;
-    align-items: center;
+    display: flex; /* Elemente nebeneinander */
+    align-items: center; /* Vertikale Ausrichtung */
     justify-content: center; /* Zentriert den Firmennamen in der Mitte */
     width: 100%;
     position: relative; /* Ermöglicht das absolute Positionieren des Logos */
@@ -36,7 +36,7 @@ body {
 
 /* Logo linksbündig */
 #logo {
-    position: absolute;
+    position: absolute; /* Positionierung am linken Rand */
     left: 20px; /* Abstand vom linken Rand */
     padding-bottom: 200px;
 }
@@ -47,18 +47,55 @@ body {
 
 }
 #servieren img{
-    width: 30px;
-    height: 30px;
-    vertical-align: bottom;
-    display: inline-block;
-    margin-bottom: 4px;
+    width: 35px;
+    height: 35px;
+    vertical-align: bottom; /* Vertikale Ausrichtung des Bildes */
+    display: inline-block; /* Stellt das Bild in einer Zeile dar */
+    margin-bottom: 0px;
+    padding-left: 10px;
 }
 
 #servieren {
     right: 15000px;
     padding: 0 5px;
 }
+/* Stil für den Login-Button innerhalb der Header-Navigation */
+.header nav a {
+    color: white;
+    text-decoration: none; /* Keine Unterstreichung */
+    font-weight: bold; /* Fett */
+    font-size: 33px; /* Einheitliche Schriftgröße */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.9); /* Schatten */
+    margin-right: 15px; /* Abstand zwischen den Links */
+}
 
+/* Stil für den Login-Button mit rotem Hintergrund und gleichem Textstil */
+.header nav #login {
+    background-color: red;
+    color: white; /* Gleiche Schriftfarbe wie die anderen Links */
+    padding: 5px 16px 8px 16px; /* Platz um den Text herum */
+    border-radius: 8px; /* Abgerundete Ecken */
+    text-decoration: none;
+    font-weight: bold; /* Fett */
+    font-size: 28px; /* Gleiche Schriftgröße wie andere Links */
+    text-align: center; /* Text zentriert */
+    margin-right: 15px; /* Gleicher Abstand rechts */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.9);
+    border-radius: 30px; /* Abgerundete Ecken */
+}
+
+/* Hover-Effekt für alle Navigationslinks */
+.header nav a:hover {
+    color: #ffcc00; /* Gelb für die Links beim Hover */
+    text-decoration: underline;
+}
+
+/* Hover-Effekt für den Login-Button (wird grün) */
+.header nav #login:hover {
+    background-color: green; /* Grüne Hintergrundfarbe beim Hover */
+    color: white; /* Schriftfarbe bleibt weiß */
+    text-decoration: none; /* Keine Unterstreichung */
+}
 
 /* Firmenname zentriert */
 .header h1 {
@@ -74,10 +111,10 @@ body {
 
 /* Navigationsbereich am unteren Rand des Headers und rechtsbündig */
 .header nav {
-    align-self: center;
+    align-self: center; /* Vertikale Ausrichtung */
     padding-right: 20px; /* Konsistenter Abstand vom rechten Rand */
     margin-top: auto; /* Positioniert die Navigation am unteren Rand des Headers */
-    display: inline-block;
+    display: inline-block; /* Elemente nebeneinander */
 }
 
 /* Links in der Navigationsleiste */
@@ -91,7 +128,6 @@ body {
     margin-right: 15px; /* Abstand zwischen den Links */
 
 }
- 
 /* Entfernt den Abstand nach dem letzten Link */
 .header nav a:last-child {
     margin-right: 0;
@@ -260,7 +296,24 @@ h1 {
     #modalContent button:hover {
         background-color: #e1a846;
     }
-
+    #bestellungen {
+        margin-top: 150px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+ 
+    }
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        color: white;
+    }
+    th {
+        background-color: #f4f4f4;
+        color: black;
+    }
 
 
 

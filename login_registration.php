@@ -26,8 +26,9 @@
         <a href="./kontakt.php">Kontakt</a>
         <a href="./impressum.php">Impressum</a>
         <a id="login" href="./login.php">Login</a>
-        <a id="servieren" href="./index.php">
-        <img  src="./web_images/essen_servieren.png" alt="Logo"> <!-- Logo mit Link -->
+        <a id="servieren" href="./bestellungen.php">
+            <img src="./web_images/essen_servieren.png" alt="Warenkorb">
+            <span id="bestellanzahl">(<?php echo $bestellAnzahl; ?>)</span>
         </a>
     </nav>
     </header>
@@ -49,8 +50,8 @@
 
     <div class="form-group-row">
         <div class="form-group">
-            <label for="reg-adresse">Adresse:</label>
-            <input type="text" id="reg-adresse" name="adresse" placeholder="Deine Adresse" required>
+            <label for="reg-straße">Straße:</label>
+            <input type="text" id="reg-straße" name="straße" placeholder="Deine Straße" required>
         </div>
         <div class="form-group">
             <label for="reg-hausnummer">Hausnummer:</label>
