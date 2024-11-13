@@ -76,9 +76,9 @@ $gesamtSumme = 0;
         </tbody>
     </table>
 
-    <h3>Gesamtsumme: <?php echo number_format($gesamtSumme, 2); ?> €</h3>
+    <h3 id ="gesamtsumme">Gesamtsumme: <?php echo number_format($gesamtSumme, 2); ?> €</h3>
 
-    <button onclick="window.location.href='kasse.php'">Zur Kasse</button>
+    <button id="zur_kasse" onclick="window.location.href='kasse.php'">Zur Kasse</button>
 </main>
 
 </body>
