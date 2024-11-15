@@ -18,24 +18,22 @@
 
 
 
-
-
-
-
-Protokoll 
-Projektstart: 7. November 2024
-Projektende: 14. November 2024
-Projektteam: 	
-•	Ron Kahihikolo
-•	Moayad Suleiman
-•	Muhammad Ibrahim Danno
-•	Viktor Betker
-•	Abdul Kader Zidan
-•	Thanh Nguyen
+### Protokoll 
+#### Projektstart: 7. November 2024
+#### Projektende: 14. November 2024
+#### Projektteam: 	
+-	Ron Kahihikolo
+-	Moayad Suleiman
+-	Muhammad Ibrahim Danno
+-	Viktor Betker
+-	Abdul Kader Zidan
+-	Thanh Nguyen
+  
 Kunde/ Auftraggeber: Danilo Arlt und Julian Martins
 ________________________________________
-Projektziel und Umfang
-Ziel des Projekts:
+## Projektziel und Umfang
+### Ziel des Projekts:
+
 Die Erstellung einer Webseite ‚Spaghetti-Code‘ mit PHP, HTML und CSS zur Repräsentierung des eigenen Betriebs mit Onlinebestellfunktion. 
 
 Projektumfang:
