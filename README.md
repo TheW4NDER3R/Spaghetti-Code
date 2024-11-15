@@ -1,14 +1,14 @@
 ### Inhaltsverzeichnis
 
 
-- Projektziel und Umfang                                                                      2
-- Kommunikation und Reporting                                                                 3
-- Anleitung für die lokale Ansicht der Webseite                                                3
-- Nutzerberechtigungen für die Spaghetti-Code Website........................................6
-- Anmeldedaten in die Datenbank..............................................................7
-- User Case: Entwicklung eines Webportals mit Registrierung und Bezahlfunktion	8
-- Live-Schaltung einer Webseite auf einem Synology NAS	11
-- Feedback	16
+- Projektziel und Umfang                                                                     
+- Kommunikation und Reporting                                                                 
+- Anleitung für die lokale Ansicht der Webseite                                               
+- Nutzerberechtigungen für die Spaghetti-Code Website
+- Anmeldedaten in die Datenbank
+- User Case: Entwicklung eines Webportals mit Registrierung und Bezahlfunktion
+- Live-Schaltung einer Webseite auf einem Synology NAS
+- Feedback
 
 
 
