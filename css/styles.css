@@ -126,7 +126,11 @@ body {
     font-size: 33px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.9);
     margin-right: 15px; /* Abstand zwischen den Links */
+};
 
+.header p {
+    font-weight: bold;
+    font-size: 33px;
 }
 /* Entfernt den Abstand nach dem letzten Link */
 .header nav a:last-child {

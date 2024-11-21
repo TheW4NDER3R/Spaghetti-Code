@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,19 +17,18 @@
     <!-- Resturant Name -->
         <h1 id="header">Spaghetti-Code</h1>
     
-        <!-- Navigationsleiste -->
-        <nav>
+    <!-- Navigationsleiste -->
+    <nav>
 
-            <a href="./index.php">Stratseite</a>
-            <a href="./menukarte.php">Menükarte</a>
-            <a href="./kontakt.php">Kontakt</a>
-            <a href="./impressum.php">Impressum</a>
-            <a id="login" href="./login.php">Anmelden</a>
-            <a id="servieren" href="./bestellungen.php">
-                <img src="./web_images/essen_servieren.png" alt="Warenkorb">
-                <?php echo count($_SESSION ["bestellungen"])?>
-            </a>
-        </nav>
+        <a href="./index.php">Stratseite</a>
+        <a href="./menukarte.php">Menükarte</a>
+        <a href="./kontakt.php">Kontakt</a>
+        <a href="./impressum.php">Impressum</a>
+        <a id="login" href="./login.php">Login</a>
+        <a id="servieren" href="./index.php">
+        <img  src="./web_images/essen_servieren.png" alt="Logo"> <!-- Logo mit Link -->
+        </a>
+    </nav>
     </header>
 
     <!-- Login-Bereich -->
